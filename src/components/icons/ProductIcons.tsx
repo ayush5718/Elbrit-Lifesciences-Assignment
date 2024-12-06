@@ -6,11 +6,25 @@ export const ProductBottle = () => (
     className="w-full h-full"
   >
     {/* Bottle Shadow */}
-    <ellipse cx="150" cy="370" rx="80" ry="15" fill="#1B4B66" fillOpacity="0.15" />
-    
+    <ellipse
+      cx="150"
+      cy="370"
+      rx="80"
+      ry="15"
+      fill="#1B4B66"
+      fillOpacity="0.15"
+    />
+
     {/* Bottle Glow */}
-    <circle cx="150" cy="200" r="120" fill="#FFE4B8" fillOpacity="0.5" filter="blur(40px)" />
-    
+    <circle
+      cx="150"
+      cy="200"
+      r="120"
+      fill="#FFE4B8"
+      fillOpacity="0.5"
+      filter="blur(40px)"
+    />
+
     {/* Bottle Body */}
     <path
       d="M110 140C110 129.954 118.954 121 129 121H171C181.046 121 190 129.954 190 140V340C190 350.046 181.046 359 171 359H129C118.954 359 110 350.046 110 340V140Z"
@@ -22,27 +36,59 @@ export const ProductBottle = () => (
       fill="white"
       fillOpacity="0.9"
     />
-    
+
     {/* Bottle Neck */}
     <path
       d="M135 80H165V120H135V80Z"
       fill="#1B4B66"
       filter="drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1))"
     />
-    
+
     {/* Bottle Cap */}
     <path
       d="M130 60C130 54.4772 134.477 50 140 50H160C165.523 50 170 54.4772 170 60V80H130V60Z"
       fill="#1B4B66"
       filter="drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1))"
     />
-    
+
     {/* Label */}
-    <rect x="130" y="200" width="40" height="100" rx="4" fill="#E3F2F9" fillOpacity="0.9" />
-    <rect x="135" y="210" width="30" height="3" rx="1.5" fill="#1B4B66" fillOpacity="0.8" />
-    <rect x="135" y="220" width="30" height="3" rx="1.5" fill="#1B4B66" fillOpacity="0.8" />
-    <rect x="135" y="230" width="20" height="3" rx="1.5" fill="#1B4B66" fillOpacity="0.8" />
-    
+    <rect
+      x="130"
+      y="200"
+      width="40"
+      height="100"
+      rx="4"
+      fill="#E3F2F9"
+      fillOpacity="0.9"
+    />
+    <rect
+      x="135"
+      y="210"
+      width="30"
+      height="3"
+      rx="1.5"
+      fill="#1B4B66"
+      fillOpacity="0.8"
+    />
+    <rect
+      x="135"
+      y="220"
+      width="30"
+      height="3"
+      rx="1.5"
+      fill="#1B4B66"
+      fillOpacity="0.8"
+    />
+    <rect
+      x="135"
+      y="230"
+      width="20"
+      height="3"
+      rx="1.5"
+      fill="#1B4B66"
+      fillOpacity="0.8"
+    />
+
     {/* Shine Effects */}
     <path
       d="M175 145C175 140 178 135 180 135C182 135 185 140 185 145V335C185 340 182 345 180 345C178 345 175 340 175 335V145Z"
@@ -53,7 +99,13 @@ export const ProductBottle = () => (
   </svg>
 );
 
-export const Pill = ({ color, className = "" }: { color: string; className?: string }) => (
+export const Pill = ({
+  color,
+  className = "",
+}: {
+  color: string;
+  className?: string;
+}) => (
   <svg
     viewBox="0 0 80 40"
     fill="none"
@@ -65,7 +117,14 @@ export const Pill = ({ color, className = "" }: { color: string; className?: str
       <ellipse cx="40" cy="17" rx="28" ry="10" fill="white" fillOpacity="0.3" />
     </g>
     <defs>
-      <filter id="pill-shadow" x="0" y="0" width="80" height="40" filterUnits="userSpaceOnUse">
+      <filter
+        id="pill-shadow"
+        x="0"
+        y="0"
+        width="80"
+        height="40"
+        filterUnits="userSpaceOnUse"
+      >
         <feGaussianBlur stdDeviation="2" />
         <feOffset dy="2" />
         <feComposite in2="hardAlpha" operator="out" />

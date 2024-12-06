@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { ProductBottle, Pill } from './icons/ProductIcons';
+import { useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ProductBottle, Pill } from "./icons/ProductIcons";
 
-const FloatingPill = ({ className = '', delay = 0, x = 0, y = 0 }) => (
+const FloatingPill = ({ className = "", delay = 0, x = 0, y = 0 }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0 }}
     animate={{ opacity: 1, scale: 1 }}
@@ -21,10 +21,10 @@ const FloatingPill = ({ className = '', delay = 0, x = 0, y = 0 }) => (
         duration: 4,
         delay,
         repeat: Infinity,
-        repeatType: "reverse"
+        repeatType: "reverse",
       }}
     >
-      <Pill className="w-12 h-12 md:w-16 md:h-16" />
+      <Pill className="w-12 h-12 md:w-16 md:h-16" color="#FFE4B8" />
     </motion.div>
   </motion.div>
 );
@@ -32,7 +32,7 @@ const FloatingPill = ({ className = '', delay = 0, x = 0, y = 0 }) => (
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const { scrollY } = useScroll();
-  
+
   const y1 = useTransform(scrollY, [0, 300], [0, 100]);
   const y2 = useTransform(scrollY, [0, 300], [0, -100]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
@@ -42,21 +42,23 @@ const Hero = () => {
   }, []);
 
   if (!isMounted) {
-    return null;
+    return (
+      <div className="min-h-[90vh] bg-gradient-to-b from-[#E3F2F9] to-white" />
+    );
   }
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#E3F2F9] via-[#E3F2F9]/50 to-white min-h-[90vh] flex items-center">
+    <div className="relative overflow-hidden bg-gradient-to-b from-[#E3F2F9] via-[#E3F2F9]/50 to-white min-h-[90vh] flex items-center">
       {/* Background Decorative Elements */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 z-0"
         style={{ opacity }}
       >
-        <motion.div 
+        <motion.div
           className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#FFE4B8]/20 rounded-full blur-3xl"
           style={{ y: y1 }}
         />
-        <motion.div 
+        <motion.div
           className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-[#E3F2F9]/40 rounded-full blur-3xl"
           style={{ y: y2 }}
         />
@@ -85,7 +87,8 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1B4B66] mb-6 leading-tight"
             >
-              Your Daily Dose <br />of Wellness
+              Your Daily Dose <br />
+              of Wellness
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -93,8 +96,9 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-lg text-gray-600 mb-8 max-w-lg"
             >
-              Premium quality vitamins and supplements for your optimal health and vitality. 
-              Enhance your daily routine with our scientifically formulated products.
+              Premium quality vitamins and supplements for your optimal health
+              and vitality. Enhance your daily routine with our scientifically
+              formulated products.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -140,7 +144,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
