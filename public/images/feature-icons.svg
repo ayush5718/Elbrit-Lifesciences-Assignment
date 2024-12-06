@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="100" viewBox="0 0 500 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clinically Studied -->
+  <circle cx="50" cy="50" r="40" fill="#1B365C"/>
+  <text x="30" y="60" font-family="Arial" font-size="12" fill="white">CS</text>
+  
+  <!-- Vegetarian Friendly -->
+  <circle cx="150" cy="50" r="40" fill="#4CAF50"/>
+  <text x="135" y="60" font-family="Arial" font-size="12" fill="white">VF</text>
+  
+  <!-- Made in India -->
+  <circle cx="250" cy="50" r="40" fill="#FF9800"/>
+  <text x="235" y="60" font-family="Arial" font-size="12" fill="white">MI</text>
+  
+  <!-- Free Shipping -->
+  <circle cx="350" cy="50" r="40" fill="#2196F3"/>
+  <text x="335" y="60" font-family="Arial" font-size="12" fill="white">FS</text>
+  
+  <!-- GMO Free -->
+  <circle cx="450" cy="50" r="40" fill="#F44336"/>
+  <text x="435" y="60" font-family="Arial" font-size="12" fill="white">GF</text>
+</svg>
